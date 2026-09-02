@@ -8,6 +8,11 @@ class Swarm < Formula
   license "MIT"
   head "https://github.com/Joloooo/swarm.git", branch: "main"
 
+  bottle do
+    root_url "https://github.com/Joloooo/homebrew-swarm/releases/download/swarm-0.1.1"
+    sha256 arm64_tahoe: "f67cbc0447970960831a622d7637d274a8f6f53968cc0247941d8854a3747083"
+  end
+
   depends_on "nmap"
   depends_on "python@3.12"
   depends_on "tmux"
