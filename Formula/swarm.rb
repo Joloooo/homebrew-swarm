@@ -17,6 +17,14 @@ class Swarm < Formula
   depends_on "python@3.12"
   depends_on "tmux"
 
+  # The pip-installed wheels ship Rust/PyO3 Mach-O extensions (cryptography's
+  # _rust.abi3.so, jiter, ...) whose install id is "@rpath/<module>.so".
+  # Homebrew would rewrite that to the absolute Cellar path, which does not fit
+  # the wheel's fixed Mach-O header pad, printing a non-fatal but alarming
+  # "Failed changing dylib ID / Failed to fix install linkage". These ids are
+  # already relocatable, so tell Homebrew to leave @rpath ids untouched.
+  preserve_rpath
+
   def install
     # swarm's dependency tree (langchain, langgraph, pydantic, playwright,
     # reportlab, ...) is far too large to vendor as Homebrew resources, and
