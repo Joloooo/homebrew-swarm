@@ -2,14 +2,14 @@ class Swarm < Formula
   include Language::Python::Virtualenv
 
   desc "Autonomous LLM-based agent for automated web-application analysis"
-  homepage "https://github.com/Joloooo/swarm"
-  url "https://github.com/Joloooo/swarm/archive/refs/tags/v0.1.1.tar.gz"
+  homepage "https://github.com/jolocorp/swarm"
+  url "https://github.com/jolocorp/swarm/archive/refs/tags/v0.1.1.tar.gz"
   sha256 "4cea80c63367d38ced5e8d3d428a5e225a4e4377653949dbe2d04346caef275a"
   license "MIT"
-  head "https://github.com/Joloooo/swarm.git", branch: "main"
+  head "https://github.com/jolocorp/swarm.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/Joloooo/homebrew-swarm/releases/download/swarm-0.1.1"
+    root_url "https://github.com/jolocorp/homebrew-swarm/releases/download/swarm-0.1.1"
     sha256 arm64_tahoe: "f67cbc0447970960831a622d7637d274a8f6f53968cc0247941d8854a3747083"
   end
 

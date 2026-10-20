@@ -1,15 +1,15 @@
-# Joloooo Swarm
+# jolocorp Swarm
 
 ## How do I install these formulae?
 
-`brew install joloooo/swarm/<formula>`
+`brew install jolocorp/swarm/<formula>`
 
-Or `brew tap joloooo/swarm` and then `brew install <formula>`.
+Or `brew tap jolocorp/swarm` and then `brew install <formula>`.
 
 Or, in a `brew bundle` `Brewfile`:
 
 ```ruby
-tap "joloooo/swarm"
+tap "jolocorp/swarm"
 brew "<formula>"
 ```
 
